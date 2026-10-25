@@ -1,2 +1,4 @@
 User-agent: *
-Disallow: /
+Allow: /
+# صفحهٔ نمونهٔ قالب پایه بخشی از پورتفولیو نیست
+Disallow: /users

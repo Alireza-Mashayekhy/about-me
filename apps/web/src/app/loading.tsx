@@ -1,11 +1,8 @@
-import { Skeleton } from '@/components/ui/skeleton';
-
 export default function Loading() {
   return (
-    <div className="flex flex-col gap-6">
-      <Skeleton className="h-8 w-48" />
-      <Skeleton className="h-4 w-80" />
-      <Skeleton className="h-64 w-full" />
+    <div className="flex min-h-[60vh] flex-col items-center justify-center gap-4 bg-[#07080B] text-[#F1F0EB]">
+      <span className="orbit-loader-ring" aria-hidden />
+      <p className="text-xs text-[#777D88]">در حال بارگذاری…</p>
     </div>
   );
 }
