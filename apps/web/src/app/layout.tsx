@@ -3,7 +3,7 @@ import './globals.css';
 import type { Metadata, Viewport } from 'next';
 import localFont from 'next/font/local';
 
-import { AppHeader } from '@/components/layout/app-header';
+import { profile } from '@/data/portfolio';
 
 import { Providers } from './providers';
 
@@ -22,22 +22,38 @@ const vazirmatn = localFont({
 
 export const metadata: Metadata = {
   title: {
-    default: 'راوند',
-    template: '%s | راوند',
+    default: `${profile.nameFa} — ${profile.roleFa} | ORBIT`,
+    template: `%s | ${profile.nameFa} — ORBIT`,
   },
-  description: 'قالب پایهٔ پروژه — NestJS + Next.js + MySQL',
-  applicationName: 'راوند',
+  description: profile.bioFa,
+  applicationName: 'ORBIT — دنیای دیجیتال علیرضا مشایخی',
+  authors: [{ name: profile.nameEn }],
+  keywords: [
+    'علیرضا مشایخی',
+    'Alireza Mashayekhy',
+    'توسعه‌دهنده فول‌استک',
+    'Full-Stack Web Developer',
+    'React',
+    'Next.js',
+    'Vue.js',
+    'Node.js',
+    'NestJS',
+  ],
+  openGraph: {
+    type: 'website',
+    locale: 'fa_IR',
+    title: `${profile.nameFa} — ${profile.roleFa}`,
+    description: profile.bioFa,
+    siteName: 'ORBIT',
+  },
   robots: {
-    index: false,
-    follow: false,
+    index: true,
+    follow: true,
   },
 };
 
 export const viewport: Viewport = {
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
-    { media: '(prefers-color-scheme: dark)', color: '#0a0a0a' },
-  ],
+  themeColor: '#07080B',
 };
 
 export default function RootLayout({
@@ -47,18 +63,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fa" dir="rtl" suppressHydrationWarning className={vazirmatn.variable}>
-      <body className="min-h-screen bg-background text-foreground antialiased">
-        <Providers>
-          <div className="flex min-h-screen flex-col">
-            <AppHeader />
-
-            <main className="mx-auto w-full max-w-6xl flex-1 px-4 py-8">{children}</main>
-
-            <footer className="border-t px-4 py-6 text-center text-xs text-muted-foreground">
-              ساخته‌شده با قالب پایهٔ راوند
-            </footer>
-          </div>
-        </Providers>
+      {/* پس‌زمینهٔ پیش‌فرض مشکی است تا قبل از لودشدن وب‌جی‌ال فلش سفید نبینیم؛
+          مسیرهای قالب پایه داخل (panel) پس‌زمینهٔ خودشان را می‌گذارند. */}
+      <body className="min-h-screen bg-[#07080B] text-[#F1F0EB] antialiased">
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

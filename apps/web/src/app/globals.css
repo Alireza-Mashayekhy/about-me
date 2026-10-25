@@ -133,3 +133,143 @@
     @apply font-sans;
   }
 }
+
+/* ============================================================
+   ORBIT — زبان بصری پورتفولیو
+   ============================================================ */
+
+::selection {
+  background: #c7ff4a;
+  color: #07080b;
+}
+
+/* حلقهٔ چرخان لودینگ اولیهٔ جهان */
+.orbit-loader-ring {
+  width: 56px;
+  height: 56px;
+  border-radius: 9999px;
+  border: 1px solid rgba(241, 240, 235, 0.12);
+  border-top-color: #c7ff4a;
+  animation: orbit-spin 0.9s linear infinite;
+  position: relative;
+}
+.orbit-loader-ring::after {
+  content: '';
+  position: absolute;
+  inset: 10px;
+  border-radius: 9999px;
+  border: 1px dashed rgba(241, 240, 235, 0.15);
+}
+
+@keyframes orbit-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* کارت اطلاعات HUD هنگام عوض‌شدن مانیتور */
+.orbit-hud-card {
+  animation: orbit-hud-in 0.32s cubic-bezier(0.22, 1, 0.36, 1);
+}
+@keyframes orbit-hud-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* حجاب ورود سینمایی: بیشتر مسیر شفاف است تا شیرجهٔ دوربین دیده شود */
+.orbit-veil {
+  opacity: 0;
+  animation: orbit-veil-in 1.2s cubic-bezier(0.6, 0, 0.9, 0.4) forwards;
+}
+@keyframes orbit-veil-in {
+  0%,
+  62% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.orbit-veil-label {
+  opacity: 0;
+  animation: orbit-veil-label-in 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+@keyframes orbit-veil-label-in {
+  0%,
+  55% {
+    opacity: 0;
+    transform: scale(1.35);
+    filter: blur(6px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+  }
+}
+
+/* آشکارشدن صفحات داخلی بعد از عبور از مانیتور */
+.orbit-page-reveal {
+  animation: orbit-page-in 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+}
+@keyframes orbit-page-in {
+  from {
+    opacity: 0;
+    clip-path: inset(38% 30% 38% 30% round 24px);
+    transform: scale(1.04);
+  }
+  to {
+    opacity: 1;
+    clip-path: inset(0 0 0 0 round 0);
+    transform: scale(1);
+  }
+}
+
+.orbit-rise {
+  animation: orbit-rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@keyframes orbit-rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* کلمهٔ غول‌پیکر توخالی در پس‌زمینهٔ تیتر صفحات */
+.orbit-ghost-word {
+  -webkit-text-stroke: 1px rgba(241, 240, 235, 0.09);
+  color: transparent;
+  user-select: none;
+}
+
+/* اسکرول‌بار ظریف برای چیپ‌های موبایل */
+.orbit-no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.orbit-no-scrollbar {
+  scrollbar-width: none;
+}
+
+/* احترام به ترجیح کاهش حرکت */
+@media (prefers-reduced-motion: reduce) {
+  .orbit-loader-ring,
+  .orbit-hud-card,
+  .orbit-veil,
+  .orbit-veil-label,
+  .orbit-page-reveal,
+  .orbit-rise {
+    animation-duration: 0.01s !important;
+    animation-delay: 0s !important;
+  }
+}
