@@ -1,5 +1,5 @@
 {
-  "extends": "@ravand/tsconfig/base.json",
+  "extends": "@aboutMe/tsconfig/base.json",
   "compilerOptions": {
     "target": "ES2022",
     "lib": ["dom", "dom.iterable", "esnext"],

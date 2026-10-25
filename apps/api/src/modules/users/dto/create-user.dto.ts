@@ -1,5 +1,5 @@
 import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger';
-import type { CreateUserInput } from '@ravand/contracts';
+import type { CreateUserInput } from '@aboutMe/contracts';
 import { IsBoolean, IsEmail, IsOptional, IsString, MaxLength, MinLength } from 'class-validator';
 
 /**

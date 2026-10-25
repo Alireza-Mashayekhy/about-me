@@ -32,11 +32,11 @@ COPY . .
 RUN --mount=type=cache,id=pnpm-store,target=/pnpm/store \
     pnpm install --frozen-lockfile
 
-# ساخت @ravand/contracts و سپس API (ترتیب وابستگی‌ها با «...» رعایت می‌شود)
-RUN pnpm --filter @ravand/api... build
+# ساخت @aboutMe/contracts و سپس API (ترتیب وابستگی‌ها با «...» رعایت می‌شود)
+RUN pnpm --filter @aboutMe/api... build
 
 # فقط وابستگی‌های production در یک پوشهٔ مستقل و قابل حمل
-RUN pnpm --filter @ravand/api deploy --legacy --prod --ignore-scripts /deploy
+RUN pnpm --filter @aboutMe/api deploy --legacy --prod --ignore-scripts /deploy
 
 
 # ────────────────────────────── اجرا ──────────────────────────────

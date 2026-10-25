@@ -1,6 +1,6 @@
 'use client';
 
-import type { SortOrder, UserSortField } from '@ravand/contracts';
+import type { SortOrder, UserSortField } from '@aboutMe/contracts';
 import { AlertCircle, ChevronLeft, ChevronRight, RefreshCw, Search, Users } from 'lucide-react';
 import { useState } from 'react';
 

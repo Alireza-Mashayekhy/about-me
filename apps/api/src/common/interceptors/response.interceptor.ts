@@ -1,5 +1,5 @@
 import { CallHandler, ExecutionContext, Injectable, NestInterceptor } from '@nestjs/common';
-import type { ApiResponse } from '@ravand/contracts';
+import type { ApiResponse } from '@aboutMe/contracts';
 import type { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 

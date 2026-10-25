@@ -1,7 +1,7 @@
 import { HttpStatus, Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import type { UserSortField } from '@ravand/contracts';
-import { ErrorCode } from '@ravand/contracts';
+import type { UserSortField } from '@aboutMe/contracts';
+import { ErrorCode } from '@aboutMe/contracts';
 import { QueryFailedError, Repository } from 'typeorm';
 
 import { paginate } from '../../common/database/paginate';

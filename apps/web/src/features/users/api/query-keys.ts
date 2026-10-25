@@ -1,4 +1,4 @@
-import type { ListUsersParams } from '@ravand/contracts';
+import type { ListUsersParams } from '@aboutMe/contracts';
 
 /**
  * کلیدهای کش React Query — ساختاری و قابل invalidate کردن در هر سطح.

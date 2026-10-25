@@ -32,7 +32,7 @@ RUN --mount=type=cache,id=pnpm-store,target=/pnpm/store \
 ARG API_URL=http://localhost:4444
 ENV API_URL=$API_URL
 
-RUN pnpm --filter @ravand/web... build
+RUN pnpm --filter @aboutMe/web... build
 
 
 # ────────────────────────────── اجرا ──────────────────────────────

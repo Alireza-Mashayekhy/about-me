@@ -1,5 +1,5 @@
 # ════════════════════════════════════════════════════════════════════
-#  Ravand — استک محلی
+#  AboutMe — استک محلی
 #
 #  پیش‌فرض (فقط دیتابیس):
 #     pnpm db:up        →  docker compose -f infra/docker-compose.yml up -d
@@ -11,12 +11,12 @@
 #  یک دیتابیس نیاز داشته باشد و مجبور نباشی هر بار کل استک را build کنی.
 # ════════════════════════════════════════════════════════════════════
 
-name: ravand
+name: aboutMe
 
 services:
   mysql:
     image: mysql:8.4
-    container_name: ravand-mysql
+    container_name: aboutMe-mysql
     restart: unless-stopped
 
     # یکسان‌سازی charset و timezone با تنظیمات TypeORM (timezone: 'Z')
@@ -26,11 +26,11 @@ services:
       - --default-time-zone=+00:00
 
     environment:
-      MYSQL_DATABASE: ravand
-      MYSQL_USER: ravand
+      MYSQL_DATABASE: aboutMe
+      MYSQL_USER: aboutMe
       # برای دموی محلی؛ در استقرار واقعی از secret manager استفاده کن
-      MYSQL_PASSWORD: ravand_dev_password
-      MYSQL_ROOT_PASSWORD: ravand_root_password
+      MYSQL_PASSWORD: aboutMe_dev_password
+      MYSQL_ROOT_PASSWORD: aboutMe_root_password
 
     ports:
       # پورت میزبان 3307 است تا با MySQL نصب‌شدهٔ روی سیستم تضاد نداشته باشد
@@ -53,7 +53,7 @@ services:
       context: ..
       dockerfile: infra/docker/api/Dockerfile
 
-    container_name: ravand-api
+    container_name: aboutMe-api
     restart: unless-stopped
 
     environment:
@@ -65,9 +65,9 @@ services:
 
       DB_HOST: mysql
       DB_PORT: 3306
-      DB_NAME: ravand
-      DB_USER: ravand
-      DB_PASSWORD: ravand_dev_password
+      DB_NAME: aboutMe
+      DB_USER: aboutMe
+      DB_PASSWORD: aboutMe_dev_password
 
     ports:
       - '4444:3001'
@@ -93,7 +93,7 @@ services:
         # پس باید دقیقاً همان مقدار runtime باشد.
         API_URL: http://api:3001
 
-    container_name: ravand-web
+    container_name: aboutMe-web
     restart: unless-stopped
 
     environment:

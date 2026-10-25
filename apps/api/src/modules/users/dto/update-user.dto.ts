@@ -1,5 +1,5 @@
 import { PartialType } from '@nestjs/swagger';
-import type { UpdateUserInput } from '@ravand/contracts';
+import type { UpdateUserInput } from '@aboutMe/contracts';
 
 import { CreateUserDto } from './create-user.dto';
 

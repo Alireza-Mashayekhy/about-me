@@ -38,7 +38,7 @@ export interface Env {
 }
 
 /** مقدار پیش‌فرض توسعه — در production اجازهٔ استفاده ندارد */
-const DEV_DB_PASSWORD = 'ravand_dev_password';
+const DEV_DB_PASSWORD = 'aboutMe_dev_password';
 
 /** پیش‌فرض پورت میزبان MySQL در docker-compose برابر ۳۳۰۷ است */
 const DEV_DB_PORT = 3307;
@@ -60,8 +60,8 @@ const schema = Joi.object({
 
   DB_HOST: Joi.string().default('localhost'),
   DB_PORT: Joi.number().port().default(DEV_DB_PORT),
-  DB_NAME: Joi.string().default('ravand'),
-  DB_USER: Joi.string().default('ravand'),
+  DB_NAME: Joi.string().default('aboutMe'),
+  DB_USER: Joi.string().default('aboutMe'),
   DB_PASSWORD: Joi.string().allow('').default(DEV_DB_PASSWORD),
 }).unknown(true);
 

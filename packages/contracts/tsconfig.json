@@ -1,5 +1,5 @@
 {
-  "extends": "@ravand/tsconfig/base.json",
+  "extends": "@aboutMe/tsconfig/base.json",
   "compilerOptions": {
     "module": "nodenext",
     "moduleResolution": "nodenext",

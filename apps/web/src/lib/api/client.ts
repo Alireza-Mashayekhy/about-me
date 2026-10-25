@@ -1,5 +1,5 @@
-import type { ApiResponse } from '@ravand/contracts';
-import { isApiErrorResponse } from '@ravand/contracts';
+import type { ApiResponse } from '@aboutMe/contracts';
+import { isApiErrorResponse } from '@aboutMe/contracts';
 
 import { ApiError } from './errors';
 

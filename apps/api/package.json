@@ -1,8 +1,8 @@
 {
-  "name": "@ravand/api",
+  "name": "@aboutMe/api",
   "version": "0.1.0",
   "private": true,
-  "description": "Ravand API — NestJS + TypeORM + MySQL",
+  "description": "AboutMe API — NestJS + TypeORM + MySQL",
   "scripts": {
     "build": "nest build",
     "clean": "node ../../scripts/clean.mjs dist .turbo tsconfig.tsbuildinfo",
@@ -20,13 +20,13 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@aboutMe/contracts": "workspace:*",
     "@nestjs/common": "^12.0.1",
     "@nestjs/config": "^12.0.1",
     "@nestjs/core": "^12.0.1",
     "@nestjs/platform-express": "^12.0.1",
     "@nestjs/swagger": "^12.0.2",
     "@nestjs/typeorm": "^12.0.2",
-    "@ravand/contracts": "workspace:*",
     "class-transformer": "^0.5.1",
     "class-validator": "^0.15.1",
     "dotenv": "^18.0.5",
@@ -38,10 +38,10 @@
     "typeorm": "^1.1.1"
   },
   "devDependencies": {
+    "@aboutMe/eslint-config": "workspace:*",
+    "@aboutMe/tsconfig": "workspace:*",
     "@nestjs/cli": "^12.0.0",
     "@nestjs/schematics": "^12.0.0",
-    "@ravand/eslint-config": "workspace:*",
-    "@ravand/tsconfig": "workspace:*",
     "@types/express": "^5.0.0",
     "@types/node": "catalog:",
     "eslint": "catalog:",

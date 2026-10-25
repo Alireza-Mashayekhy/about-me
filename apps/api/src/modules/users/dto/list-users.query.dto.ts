@@ -1,6 +1,6 @@
 import { ApiPropertyOptional } from '@nestjs/swagger';
-import type { UserSortField } from '@ravand/contracts';
-import { USER_SORT_FIELDS } from '@ravand/contracts';
+import type { UserSortField } from '@aboutMe/contracts';
+import { USER_SORT_FIELDS } from '@aboutMe/contracts';
 import { IsIn, IsOptional } from 'class-validator';
 
 import { ListQueryDto } from '../../../common/query/list-query.dto';

@@ -92,7 +92,7 @@ importers:
       '@nestjs/typeorm':
         specifier: ^12.0.2
         version: 12.0.2(@nestjs/common@12.1.2(class-transformer@0.5.1)(class-validator@0.15.1)(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@12.1.2)(reflect-metadata@0.2.2)(rxjs@7.8.2)(typeorm@1.1.1(mysql2@3.24.5(@types/node@22.20.5))(ts-node@10.9.2(@types/node@22.20.5)(typescript@6.0.3)))
-      '@ravand/contracts':
+      '@aboutMe/contracts':
         specifier: workspace:*
         version: link:../../packages/contracts
       class-transformer:
@@ -129,10 +129,10 @@ importers:
       '@nestjs/schematics':
         specifier: ^12.0.0
         version: 12.0.6(chokidar@5.0.0)(prettier@3.9.9)(typescript@6.0.3)
-      '@ravand/eslint-config':
+      '@aboutMe/eslint-config':
         specifier: workspace:*
         version: link:../../packages/eslint-config
-      '@ravand/tsconfig':
+      '@aboutMe/tsconfig':
         specifier: workspace:*
         version: link:../../packages/tsconfig
       '@types/express':
@@ -159,7 +159,7 @@ importers:
 
   apps/web:
     dependencies:
-      '@ravand/contracts':
+      '@aboutMe/contracts':
         specifier: workspace:*
         version: link:../../packages/contracts
       '@tanstack/react-query':
@@ -202,10 +202,10 @@ importers:
       '@next/env':
         specifier: ^16.3.8
         version: 16.3.8
-      '@ravand/eslint-config':
+      '@aboutMe/eslint-config':
         specifier: workspace:*
         version: link:../../packages/eslint-config
-      '@ravand/tsconfig':
+      '@aboutMe/tsconfig':
         specifier: workspace:*
         version: link:../../packages/tsconfig
       '@tailwindcss/postcss':
@@ -241,7 +241,7 @@ importers:
 
   packages/contracts:
     devDependencies:
-      '@ravand/tsconfig':
+      '@aboutMe/tsconfig':
         specifier: workspace:*
         version: link:../tsconfig
       typescript:

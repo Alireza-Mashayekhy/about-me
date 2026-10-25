@@ -1,5 +1,5 @@
 import { HttpException, HttpStatus } from '@nestjs/common';
-import type { ErrorCode, ValidationErrorDetail } from '@ravand/contracts';
+import type { ErrorCode, ValidationErrorDetail } from '@aboutMe/contracts';
 
 /**
  * خطای دامنه با کد خطای مشترک (طرف وب هم همان کد را می‌شناسد).

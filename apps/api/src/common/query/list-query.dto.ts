@@ -1,5 +1,5 @@
-import type { SortOrder } from '@ravand/contracts';
-import { SORT_ORDERS, SortOrder as SortOrderValues } from '@ravand/contracts';
+import type { SortOrder } from '@aboutMe/contracts';
+import { SORT_ORDERS, SortOrder as SortOrderValues } from '@aboutMe/contracts';
 import { IsIn, IsOptional, IsString, MaxLength } from 'class-validator';
 
 import { PaginationQueryDto } from './pagination-query.dto';

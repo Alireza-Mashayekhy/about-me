@@ -1,6 +1,6 @@
 'use client';
 
-import type { User } from '@ravand/contracts';
+import type { User } from '@aboutMe/contracts';
 import { Loader2, Trash2 } from 'lucide-react';
 
 import { Badge } from '@/components/ui/badge';

@@ -1,6 +1,6 @@
 import { HttpStatus } from '@nestjs/common';
-import type { ValidationErrorDetail } from '@ravand/contracts';
-import { ErrorCode } from '@ravand/contracts';
+import type { ValidationErrorDetail } from '@aboutMe/contracts';
+import { ErrorCode } from '@aboutMe/contracts';
 import type { ValidationError } from 'class-validator';
 
 const CODE_BY_STATUS: Record<number, ErrorCode> = {

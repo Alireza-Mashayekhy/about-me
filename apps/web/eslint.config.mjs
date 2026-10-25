@@ -1,4 +1,4 @@
-import baseConfig from '@ravand/eslint-config/base';
+import baseConfig from '@aboutMe/eslint-config/base';
 import { defineConfig, globalIgnores } from 'eslint/config';
 import nextVitals from 'eslint-config-next/core-web-vitals';
 import nextTs from 'eslint-config-next/typescript';

@@ -1,6 +1,6 @@
 'use client';
 
-import type { CreateUserInput, ListUsersParams } from '@ravand/contracts';
+import type { CreateUserInput, ListUsersParams } from '@aboutMe/contracts';
 import { keepPreviousData, useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { toast } from 'sonner';
 

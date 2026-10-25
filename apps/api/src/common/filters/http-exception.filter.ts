@@ -6,8 +6,8 @@ import {
   HttpStatus,
   Logger,
 } from '@nestjs/common';
-import type { ApiErrorResponse, ErrorCode, ValidationErrorDetail } from '@ravand/contracts';
-import { ErrorCode as Codes, isErrorCode } from '@ravand/contracts';
+import type { ApiErrorResponse, ErrorCode, ValidationErrorDetail } from '@aboutMe/contracts';
+import { ErrorCode as Codes, isErrorCode } from '@aboutMe/contracts';
 import type { Request, Response } from 'express';
 
 import { messageForStatus, MESSAGES } from '../messages/messages';

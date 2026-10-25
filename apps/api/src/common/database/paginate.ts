@@ -1,5 +1,5 @@
-import type { PaginationMeta } from '@ravand/contracts';
-import { createPaginationMeta } from '@ravand/contracts';
+import type { PaginationMeta } from '@aboutMe/contracts';
+import { createPaginationMeta } from '@aboutMe/contracts';
 import type { ObjectLiteral, SelectQueryBuilder } from 'typeorm';
 
 export interface Paginated<T> {

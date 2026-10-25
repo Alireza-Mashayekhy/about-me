@@ -1,4 +1,4 @@
-import { ErrorCode } from '@ravand/contracts';
+import { ErrorCode } from '@aboutMe/contracts';
 import { QueryCache, QueryClient } from '@tanstack/react-query';
 import { toast } from 'sonner';
 

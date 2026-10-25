@@ -1,4 +1,4 @@
-# @ravand/api
+# @aboutMe/api
 
 API راوند بر پایهٔ NestJS + TypeORM + MySQL.
 

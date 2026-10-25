@@ -1,4 +1,4 @@
-import baseConfig from '@ravand/eslint-config/base';
+import baseConfig from '@aboutMe/eslint-config/base';
 import tseslint from 'typescript-eslint';
 
 export default [

@@ -1,5 +1,5 @@
-import type { ApiErrorResponse, ErrorCode, ValidationErrorDetail } from '@ravand/contracts';
-import { ErrorCode as Codes } from '@ravand/contracts';
+import type { ApiErrorResponse, ErrorCode, ValidationErrorDetail } from '@aboutMe/contracts';
+import { ErrorCode as Codes } from '@aboutMe/contracts';
 
 export interface ApiErrorInit {
   code: ErrorCode;

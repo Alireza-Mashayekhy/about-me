@@ -1,4 +1,4 @@
-# راوند (Ravand)
+# راوند (AboutMe)
 
 قالب پایهٔ مونوریپو برای شروع سریع پروژه‌های وب فارسی/RTL:
 
@@ -145,7 +145,7 @@ export class CreateUserDto implements CreateUserInput { … }
 ساخت مایگریشن جدید:
 
 ```bash
-pnpm --filter @ravand/api db:migration:create src/database/migrations/AddSomething
+pnpm --filter @aboutMe/api db:migration:create src/database/migrations/AddSomething
 ```
 
 ---

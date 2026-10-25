@@ -1,4 +1,4 @@
-import type { CreateUserInput, ListUsersParams, User } from '@ravand/contracts';
+import type { CreateUserInput, ListUsersParams, User } from '@aboutMe/contracts';
 
 import { apiData, apiRequest, toQueryString } from '@/lib/api/client';
 

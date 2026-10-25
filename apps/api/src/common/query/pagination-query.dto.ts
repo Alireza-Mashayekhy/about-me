@@ -1,4 +1,4 @@
-import { PAGINATION } from '@ravand/contracts';
+import { PAGINATION } from '@aboutMe/contracts';
 import { Type } from 'class-transformer';
 import { IsInt, Max, Min } from 'class-validator';
 
